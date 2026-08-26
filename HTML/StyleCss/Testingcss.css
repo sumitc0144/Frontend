@@ -1,0 +1,17 @@
+div{
+    
+    justify-content:center;
+    background-color: #f2f2f2;
+    height: 400px;
+    width: 700px;
+    margin: 0 auto;
+}
+.container h1 {
+    margin-bottom: 15px;
+}
+
+.container img {
+    display: block;   /* ensures it stays on its own line */
+    margin: 10px 0; 
+      /* adds vertical spacing */
+}
