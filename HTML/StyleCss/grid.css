@@ -1,0 +1,91 @@
+.container{
+    border:3px solid red;
+    height: 200px;
+    display: grid;
+
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 1fr 1fr 1fr ;
+}
+
+.box1{
+    border:2px solid black;
+    /* It centers .box1 vertically within the row it belongs to. */
+    /* flex-end: right bottom corner vertically */
+    align-self: flex-end;
+    /* It centers .box1 horizontally within the column it belongs to */
+    justify-self: center;
+}
+
+
+.box3 {
+    border: 2px solid black;
+    display: grid; /* make box3 a grid container */
+    grid-template-columns: 1fr 2fr;   /* sidebar smaller, main bigger */
+    grid-template-rows: 50px 1fr 50px; /* header, content, footer */
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 5px;
+}
+
+.header {
+    grid-area: header;
+    background: lightblue;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: lightgreen;
+}
+
+.main {
+    grid-area: main;
+    background: lightcoral;
+}
+
+.footer {
+    grid-area: footer;
+    background: lightgray;
+}
+
+
+
+.box3{
+    border:2px solid black;
+}
+
+
+/* Begin in row 1, column 2.
+Stretch until column 4 (so it spans column 2 and 3).
+End at row 2 (so it only covers row 1). */
+
+.box4{
+    border:2px solid black;
+    /* grid-row:1/2;
+    grid-column: 2/4; */
+    grid-area:1/2/2/4;
+}
+
+
+.box5{
+    border:2px solid black;
+}
+
+
+.box6{
+    border:2px solid black;
+}
+
+
+.box7{
+    border:2px solid black;
+}
+
+.box8{
+    border:2px solid black;
+}
+
+.box9{
+    border:2px solid black;
+}
