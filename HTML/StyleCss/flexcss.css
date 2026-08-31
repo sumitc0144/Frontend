@@ -1,4 +1,57 @@
-.container{
-    display:flex;
-    
+.container {
+    border: 3px solid red;
+    height: 200px;
+    display: flex;
+
+
+}
+
+.box1 {
+    border: 2px solid black;
+    gap: 50px;
+
+}
+
+
+.box2 {
+    border: 2px solid black;
+    display: gird;
+}
+
+
+
+
+.box3 {
+    border: 2px solid black;
+}
+
+
+
+
+.box4 {
+    border: 2px solid black;
+
+}
+
+
+.box5 {
+    border: 2px solid black;
+}
+
+
+.box6 {
+    border: 2px solid black;
+}
+
+
+.box7 {
+    border: 2px solid black;
+}
+
+.box8 {
+    border: 2px solid black;
+}
+
+.box9 {
+    border: 2px solid black;
 }

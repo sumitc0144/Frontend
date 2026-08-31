@@ -3,6 +3,8 @@
     height: 200px;
     display: grid;
 
+    /* grid-template-columns → controls widths of columns.
+    grid-template-rows → controls heights of rows. */
     grid-template-columns: 50px 50px 50px;
     grid-template-rows: 1fr 1fr 1fr ;
 }
