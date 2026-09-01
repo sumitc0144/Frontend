@@ -3,6 +3,14 @@
     height: 200px;
     display: grid;
 
+    /* grid-template-columns: repeat(3, 40px);
+    grid-template-rows: 40px 30px 40px; */
+
+    /* justify-items: flex-end;
+    align-items: flex-end; */
+
+    /* justify-content: center;
+    align-content: flex-end; */
     /* grid-template-columns → controls widths of columns.
     grid-template-rows → controls heights of rows. */
     grid-template-columns: 50px 50px 50px;
