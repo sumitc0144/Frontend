@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="StyleCss/Testingcss.css">
+    <style>
+        /* Block example */
+        .block {
+            display: block;
+            background: lightblue;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        /* Inline example */
+        .inline {
+            display: inline;
+            background: lightgreen;
+            padding: 5px;
+        }
+
+        /* Inline-block example */
+        .inline-block {
+            display: inline-block;
+            background: lightcoral;
+            width: 120px;
+            height: 60px;
+            margin: 5px;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <h1>Testing CSS</h1><br>
         <img src="../Images/sumit.png" height="200px" width="200px" alt="Sumit">
         <hr>
         <p>This is a paragraph to test CSS styling.</p>
         
-    </div>
+    </div> -->
+
+    <h2>Block Example</h2>
+    <div class="block">Block 1</div>
+    <div class="block">Block 2</div>
+    <div class="block">Block 3</div>
+
+    <h2>Inline Example</h2>
+    <span class="inline">Inline 1</span>
+    <span class="inline">Inline 2</span>
+    <span class="inline">Inline 3</span>
+
+    <h2>Inline-Block Example</h2>
+    <div class="inline-block">Box 1</div>
+    <div class="inline-block">Box 2</div>
+    <div class="inline-block">Box 3</div>
 </body>
+
 </html>

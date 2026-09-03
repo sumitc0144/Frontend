@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  height: 120px;
+  border: 2px solid black;
+  margin: 20px 0;
+  background: #f0f0f0;
+}
+
+.box {
+  background: lightblue;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>justify-content examples</h2>
+
+<h3>flex-start</h3>
+<div class="container" style="justify-content:flex-start; align-items:flex-start;">
+  <div class="box">Box 1</div><div class="box">Box 2</div><div class="box">Box 3</div>
+</div>
+
+<h3>flex-end</h3>
+<div class="container" style="justify-content:flex-end; align-items:flex-end;">
+  <div class="box">Box 1</div><div class="box">Box 2</div><div class="box">Box 3</div>
+</div>
+
+<h3>center</h3>
+<div class="container" style="justify-content:center; align-items:center;">
+  <div class="box">Box 1</div><div class="box">Box 2</div><div class="box">Box 3</div>
+</div>
+
+<h3>space-between</h3>
+<div class="container" style="justify-content:space-between; align-items:center;">
+  <div class="box">Box 1</div><div class="box">Box 2</div><div class="box">Box 3</div>
+</div>
+
+<h3>space-around</h3>
+<div class="container" style="justify-content:space-around; align-items:center;">
+  <div class="box">Box 1</div><div class="box">Box 2</div><div class="box">Box 3</div>
+</div>
+
+<h3>space-evenly</h3>
+<div class="container" style="justify-content:space-evenly; align-items:center;">
+  <div class="box">Box 1</div><div class="box">Box 2</div><div class="box">Box 3</div>
+</div>
+
+<hr>
+
+<h2>align-items examples</h2>
+
+<h3>flex-start</h3>
+<div class="container" style="align-items:flex-start;">
+  <div class="box" style="height:40px;">Box 1</div>
+  <div class="box" style="height:60px;">Box 2</div>
+  <div class="box" style="height:80px;">Box 3</div>
+</div>
+
+<h3>flex-end</h3>
+<div class="container" style="align-items:flex-end;">
+  <div class="box" style="height:40px;">Box 1</div>
+  <div class="box" style="height:60px;">Box 2</div>
+  <div class="box" style="height:80px;">Box 3</div>
+</div>
+
+<h3>center</h3>
+<div class="container" style="align-items:center;">
+  <div class="box" style="height:40px;">Box 1</div>
+  <div class="box" style="height:60px;">Box 2</div>
+  <div class="box" style="height:80px;">Box 3</div>
+</div>
+
+<h3>stretch</h3>
+<div class="container" style="align-items:stretch;">
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+</div>
+
+<h3>baseline</h3>
+<div class="container" style="align-items:baseline;">
+  <div class="box" style="font-size:12px;">Small text</div>
+  <div class="box" style="font-size:24px;">Big text</div>
+  <div class="box" style="font-size:18px;">Medium text</div>
+</div>
+
+</body>
+</html>

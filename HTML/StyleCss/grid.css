@@ -1,6 +1,7 @@
-.container{
-    border:3px solid red;
-    height: 200px;
+.container {
+    border: 3px solid red;
+    height: 500px;
+    width: 500px;
     display: grid;
 
     /* grid-template-columns: repeat(3, 40px);
@@ -14,11 +15,11 @@
     /* grid-template-columns → controls widths of columns.
     grid-template-rows → controls heights of rows. */
     grid-template-columns: 50px 50px 50px;
-    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
-.box1{
-    border:2px solid black;
+.box1 {
+    border: 2px solid black;
     /* It centers .box1 vertically within the row it belongs to. */
     /* flex-end: right bottom corner vertically */
     align-self: flex-end;
@@ -29,10 +30,15 @@
 
 .box3 {
     border: 2px solid black;
-    display: grid; /* make box3 a grid container */
-    grid-template-columns: 1fr 2fr;   /* sidebar smaller, main bigger */
-    grid-template-rows: 50px 1fr 50px; /* header, content, footer */
+    display: grid;
+    /* make box3 a grid container */
+    /* grid-template-columns: 1fr 2fr;   sidebar smaller, main bigger */
+    grid-template-columns: repeat(2, 1fr);
+    /*two equal columns*/
+    grid-template-rows: 50px 1fr 50px;
+    /* header, content, footer */
     grid-template-areas:
+        /* 2 times*/
         "header header"
         "sidebar main"
         "footer footer";
@@ -61,8 +67,8 @@
 
 
 
-.box3{
-    border:2px solid black;
+.box3 {
+    border: 2px solid black;
 }
 
 
@@ -70,32 +76,34 @@
 Stretch until column 4 (so it spans column 2 and 3).
 End at row 2 (so it only covers row 1). */
 
-.box4{
-    border:2px solid black;
+.box4 {
+    border: 2px solid black;
     /* grid-row:1/2;
     grid-column: 2/4; */
-    grid-area:1/2/2/4;
+    grid-area: 1/2/2/4;
 }
 
 
-.box5{
-    border:2px solid black;
+.box5 {
+    border: 2px solid black;
 }
 
 
-.box6{
-    border:2px solid black;
+.box6 {
+    border: 2px solid black;
 }
 
 
-.box7{
-    border:2px solid black;
+.box7 {
+
+    border: 2px solid black;
+
 }
 
-.box8{
-    border:2px solid black;
+.box8 {
+    border: 2px solid black;
 }
 
-.box9{
-    border:2px solid black;
+.box9 {
+    border: 2px solid black;
 }

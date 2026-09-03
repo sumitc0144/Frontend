@@ -1,4 +1,4 @@
-div{
+/* /* div{
     
     justify-content:center;
     background-color: #f2f2f2;
@@ -12,6 +12,7 @@ div{
 
 .container img {
     display: block;   /* ensures it stays on its own line */
-    margin: 10px 0; 
-      /* adds vertical spacing */
-}
+/* margin: 10px 0; */
+/* adds vertical spacing 
+} */
+
