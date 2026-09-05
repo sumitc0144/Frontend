@@ -4,81 +4,75 @@
 <head>
   <title>Dashboard with Grid Areas</title>
   <style>
-    /* Topbar */
+    /* Topbar
     .topbar {
       background: #333;
       color: white;
       padding: 10px;
       text-align: center;
+    } */
+
+    .topbar{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background-color:#333;
+      color:white;
+      height:50px;
     }
 
-    /* Grid container */
-    .container {
-      display: grid;
-
-      /* Define 5 columns: sidebar + 4 content columns */
-      grid-template-columns: 200px 1fr 1fr 1fr 1fr;
-
-      /* Define 3 rows: stat cards, activity, details */
-      grid-template-rows: auto auto auto;
-
-      /* Layout map using named areas */
+    .container{
+      display:grid;
       grid-template-areas:
         "sidebar card1 card2 card3 card4"
-        /* first row */
         "sidebar activity activity activity activity"
-        /* second row */
         "sidebar details details details details";
-      /* third row */
-
-      gap: 10px;
-      /* spacing between items */
-      padding: 10px;
     }
 
-    /* Sidebar */
-    .sidebar {
-      grid-area: sidebar;
-      background: #444;
-      color: white;
-      padding: 20px;
+    .sidebar{
+      grid-area:sidebar;
+      background-color:#f4f4f4;
+      padding:10px;
     }
 
-    /* Stat cards */
-    .card1 {
-      grid-area: card1;
+    .card1{
+      grid-area:card1;
+      background-color:#fff;
+      padding:10px;
+      border:1px solid #ccc;
+    }
+    .card2{
+      grid-area:card2;
+      background-color:#fff;
+      padding:10px;
+      border:1px solid #ccc;
+    }
+    .card3{
+      grid-area:card3;
+      background-color:#fff;
+      padding:10px;
+      border:1px solid #ccc;
     }
 
-    .card2 {
-      grid-area: card2;
+    .card4{
+      grid-area:card4;
+      background-color:#fff;
+      padding:10px;
+      border:1px solid #ccc;
     }
 
-    .card3 {
-      grid-area: card3;
+    .activity{
+      grid-area:activity;
+      background-color:#fff;
+      padding:10px;
+      border:1px solid #ccc;
     }
 
-    .card4 {
-      grid-area: card4;
-    }
-
-    .card {
-      background: #eee;
-      padding: 20px;
-      text-align: center;
-    }
-
-    /* Activity */
-    .activity {
-      grid-area: activity;
-      background: #f9f9f9;
-      padding: 20px;
-    }
-
-    /* Details */
-    .details {
-      grid-area: details;
-      background: #ddd;
-      padding: 20px;
+    .details{
+      grid-area:details;
+      background-color:#fff;
+      padding:10px;
+      border:1px solid #ccc;
     }
   </style>
 </head>
@@ -89,10 +83,10 @@
   <div class="container">
     <div class="sidebar">SIDEBAR NAVIGATION</div>
 
-    <div class="card card1">STAT CARD 1</div>
-    <div class="card card2">STAT CARD 2</div>
-    <div class="card card3">STAT CARD 3</div>
-    <div class="card card4">STAT CARD 4</div>
+    <div class="card1">STAT CARD 1</div>
+    <div class="card2">STAT CARD 2</div>
+    <div class="card3">STAT CARD 3</div>
+    <div class="card4">STAT CARD 4</div>
 
     <div class="activity">RECENT ACTIVITY SECTION</div>
     <div class="details">USER DETAILS / OTHER INFO SECTION</div>
