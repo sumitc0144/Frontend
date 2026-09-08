@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+            grid-template-columns: repeat(4, auto);
+            gap: 10px;
+
+
+            border: 2px solid black;
+            background: #e9e6e6;
+
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product {
+            background: #f0f0f0;
+            margin: 10px;
+            text-align: center;
+            align-items: center;
+            height: 300px;
+            width: 200px;
+            border-radius: 10px;
+
+            border: 1px solid #ccc;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #fb2104;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            
+        }
+
+        button:hover {
+            background-color: #025a06;
+            border:1px solid #025a06;
+            
+        }
+
+        img:hover{
+            /* transform is used to change the size of image  scale(1.1)  1 is normal size no change 1.1 mean 10% larger vice versa*/
+            transform: scale(1.1);
+            /* transition is used for smoother animation changes on hover */
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;gap: 10px;">Superheroes</h1>
+    
+    <div class="container">
+        
+        <div class="product">Iron Man
+            <div style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                <img src="../Images/tony.jpg" alt="tony" style="max-height: 100%; max-width: 100%;">
+            </div>
+            <p>Man of steel</p>
+            <button>Choose Hero</button>
+        </div>
+        <div class="product">Thor
+            <div style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                <img src="../Images/thor.jpg" alt="Thor" style="max-height: 100%; max-width: 100%;">
+            </div>
+            <p>God of thunder</p>
+            <button>Choose Hero</button>
+        </div>
+        <div class="product">Captain America
+            <div style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                <img src="../Images/Captain America - Chris Evans.jpg" alt="Captain America "
+                    style="max-height: 100%; max-width: 100%;">
+            </div>
+            <p>Shield bearer</p>
+            <button>Choose Hero</button>
+        </div>
+        <div class="product">Hulk
+            <div style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                <img src="../Images/hulk.jpg" alt="Hulk" style="max-height: 100%; max-width: 100%;">
+            </div>
+            <p>Green goliath</p>
+            <button>Choose Hero</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
