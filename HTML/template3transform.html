@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 1000px;
+            /* enables 3D depth */
+        }
+
+        .container {
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            background: #e9e6e6;
+            /* starts slow, speeds up in the middle, slows down at the end. */
+            transition: transform 0.5s ease-in-out;
+            /* starts slow, speeds up, then slows down again.Good for hover effect */
+            transition: transform 0.5s ease;
+            /* starts slow, then speeds up quickly */
+            transition: transform 0.5s ease-in;
+            /* smoother animation */
+        }
+
+        /* Translate */
+        .container:hover {
+            transform: translateX(300px) translateY(200px) translateZ(500px);
+        }
+
+        /* Rotate */
+        .container {
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            background: #e9e6e6;
+            transition: transform 0.5s ease-in-out;
+            /* smoother animation */
+        }
+
+        .container:hover {
+            transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg);
+        }
+
+        /* Scale */
+        .container {
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            background: #e9e6e6;
+            transition: transform 0.5s ease-in-out;
+            /* smoother animation */
+        }
+
+        .container:hover {
+            transform: scale(1.5);
+        }
+
+        /* Skew */
+        .container {
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            background: #e9e6e6;
+            transition: transform 0.5s ease-in-out;
+            /* smoother animation */
+        }
+
+        .container:hover {
+            transform: skewX(30deg) skewY(30deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Superheroes</h1>
+    <div class="container"></div>
+    <div class="container1"></div>
+</body>
+
+</html>

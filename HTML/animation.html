@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superheroes Theme</title>
+    <style>
+        /* Define global CSS variables */
+        :root {
+            --primary-color: red;
+            --secondary-color: blue;
+        }
+
+        /* Style the container using the variables */
+        .container {
+            height: 150px;
+            width: 150px;
+            background-color: var(--primary-color);
+            border: 5px solid var(--secondary-color);
+
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            /* animation: moveAndColor 4s infinite alternate ease-in-out; */
+            /* animation :name duration itterativ_funcionality  trabsition */
+
+             /* Full animation syntax */
+      animation-name: moveAndColor;          /* keyframes name */
+      animation-duration: 4s;                /* cycle length */
+      animation-timing-function: ease-in-out;/* speed curve */
+      animation-delay: 0s;                   /* wait before start */
+      animation-iteration-count: infinite;   /* repeat forever */
+      animation-direction: alternate;        /* forward then backward */
+      animation-fill-mode: forwards;         /* keep end state */
+        }
+
+        /* Define the animation keyframes */
+        @keyframes moveAndColor {
+            0% {
+                left: 0;
+                background-color: red;
+                <h1>
+            }
+
+            50% {
+                left: 200px;
+                background-color: blue;
+            }
+
+            100% {
+                left: 400px;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Superheroes</h1>
+    <div class="container">
+        Hero Box
+    </div>
+
+    <h1 style="text-align:center;">CSS Animation Demo</h1>
+    <div class="box"></div>
+
+
+</body>
+
+</html>

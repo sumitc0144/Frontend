@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3D Circle Rotation with Classes</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+            perspective: 1000px;
+            /* enables 3D depth */
+        }
+
+        .circle {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            animation: spin 10s linear infinite;
+        }
+
+        .card {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: center center;
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+        }
+
+        /* Each card positioned using its own class */
+        .class1 {
+            transform: rotateY(0deg) translateZ(150px);
+        }
+
+        .class2 {
+            transform: rotateY(72deg) translateZ(150px);
+        }
+
+        .class3 {
+            transform: rotateY(144deg) translateZ(150px);
+        }
+
+        .class4 {
+            transform: rotateY(216deg) translateZ(150px);
+        }
+
+        .class5 {
+            transform: rotateY(288deg) translateZ(150px);
+        }
+
+        /* Circle rotation animation */
+        @keyframes spin {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle">
+        <div class="card class1"><img src="../Images/tony.jpg" alt="Tony"></div>
+        <div class="card class2"><img src="../Images/tony.jpg" alt="Tony"></div>
+        <div class="card class3"><img src="../Images/tony.jpg" alt="Tony"></div>
+        <div class="card class4"><img src="../Images/tony.jpg" alt="Tony"></div>
+        <div class="card class5"><img src="../Images/tony.jpg" alt="Tony"></div>
+    </div>
+</body>
+
+</html>
