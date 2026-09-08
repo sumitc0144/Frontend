@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using CSS Grid for Responsive Layout</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    .card {
+        
+        border: 1px solid #ccc;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        gap: 10px;
+    }
+    .images img {
+        width: 150px;
+        height: 150px;
+
+        /* object-fit: cover; */
+        background-color: #f2f2f2;
+        object-fit: contain;
+        border-radius: 50%;
+        border: 2px solid #ccc;
+       
+    }
+
+    .product_price {
+        color: #00ff00;
+        font-weight: bold;
+    }
+
+    @media (min-width: 576px) and (max-width: 991px) {
+        .container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 575px) {
+        .container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="images">
+                <img src="https://img.magnific.com/free-vector/smart-watch-realistic-image-black_1284-11873.jpg" alt="Smart Watch">
+            </div>
+            <h2 class="product_name"> Smart Watch</h2>
+            <h3 class="product_price">$199.99</h3>
+            <p class="product_description">Stay connected with this sleek smart watch.</p>
+        </div>
+
+        <div class="card">
+            <div class="images">
+                <img  src="https://i.pinimg.com/736x/b0/ec/45/b0ec45f8e7def0c51b17de114dec7082.jpg" alt="Wireless Headphones">
+            </div>
+            <h2 class="product_name">Wireless Headphones</h2>
+            <h3 class="product_price">$29.99</h3>
+            <p class="product_description">High-quality wireless headphones with noise cancellation.</p>
+        </div>
+
+        <div class="card">
+            <div class="images">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT8tYwJuGFS1g79MDntNqByx2dtMmv7IYPo2aJRu7vbnLVo5WFJbnICbng3-ZOaDU_X1Z76kUcYE89q6XhU4UHxHzxGkSP452iFAP0vpve-l7C9gyzgeKW9-7I" alt="Travel Backpack">
+            </div>
+            <h2 class="product_name">Travel Backpack</h2>
+            <h3 class="product_price">$59.99</h3>
+            <p class="product_description">Perfect for travel with multiple compartments.</p>
+        </div>
+
+        <div class="card">
+            <div class="images">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTKKePEUZDnw4m9nbSpN-h-2iZDQPm2QYb847q5ROqiibf4PwkqcOLah3eM3AF5BDDFA-9bYACDe8feYdScbI8gB7Vv7vwh1x6NElKnGVtSNhc8b0CmNRdTvbc" alt="Sneakers">
+            </div>
+            <h2 class="product_name">Sneakers</h2>
+            <h3 class="product_price">$89.99</h3>
+            <p class="product_description">Comfortable and stylish sneakers for everyday wear.  </p>
+        </div>
+    </div>
+</body>
+</html>
