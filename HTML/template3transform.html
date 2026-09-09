@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Transform</title>
     <style>
         body {
             perspective: 1000px;
@@ -26,22 +26,32 @@
         }
 
         /* Translate */
-        .container:hover {
-            transform: translateX(300px) translateY(200px) translateZ(500px);
-        }
-
-        /* Rotate */
-        .container {
+        .translate {
             height: 50px;
             width: 50px;
             border: 2px solid black;
             background: #e9e6e6;
-            transition: transform 0.5s ease-in-out;
-            /* smoother animation */
+            text-align-last: center;
+            
+        }
+        .translate:hover {
+            transform: translateX(300px) translateY(200px) translateZ(500px);
+            transition: transform 5s ease;
         }
 
-        .container:hover {
+        /* Rotate */
+        .container1 {
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            background: #e9e6e6;
+            
+        }
+
+        .container1:hover {
             transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg);
+            transition: transform 0.5s ease-in-out;
+            /* smoother animation */
         }
 
         /* Scale */
@@ -50,34 +60,41 @@
             width: 50px;
             border: 2px solid black;
             background: #e9e6e6;
-            transition: transform 0.5s ease-in-out;
-            /* smoother animation */
+        
         }
 
         .container:hover {
             transform: scale(1.5);
-        }
-
-        /* Skew */
-        .container {
-            height: 50px;
-            width: 50px;
-            border: 2px solid black;
-            background: #e9e6e6;
             transition: transform 0.5s ease-in-out;
             /* smoother animation */
         }
 
-        .container:hover {
-            transform: skewX(30deg) skewY(30deg);
+        /* Skew */
+        .skew1 {
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            background: #e9e6e6;
+            
+        }
+
+        .skew1:hover {
+            transform: skewY(30deg) skewY(30deg);
+            transition: transform 0.5s ease-in-out;
+            /* smoother animation */
+
         }
     </style>
 </head>
 
 <body>
-    <h1 style="text-align: center;">Superheroes</h1>
-    <div class="container"></div>
-    <div class="container1"></div>
+    <h1 style="text-align: center;">TRANSFORM</h1>
+    <div class="container">scale</div>
+    <div class="container1">Rotate</div>
+    <div class="translate">Translate</div>
+    <div class="skew1" style="border: 2px solid; background-color: aquamarine; height: 50px; width:50px;">
+        skew1
+    </div>
 </body>
 
 </html>
