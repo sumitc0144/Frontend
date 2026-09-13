@@ -10,3 +10,7 @@ header {
     height: 300px;               /* give header some height */
     opacity:70%;
 }
+
+div nav ul li{
+    display: inline;
+}
