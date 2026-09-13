@@ -13,4 +13,9 @@ header {
 
 div nav ul li{
     display: inline;
+    color: rgb(87, 101, 114);
+}
+
+div nav ul {
+    justify-content: center;
 }
