@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        // Different ways to create arrays
+        let arr1 = [10, 20, 30];        // Literal notation
+        let arr2 = new Array(); // Using constructor
+        arr2[0] = "Apple";
+        arr2[1] = "Banana";
+        arr2[2] = "Mango";
+        console.log(arr1);
+        console.log(arr2);
+
+        let fruits = ["Apple", "Banana", "Mango", "Orange", "Grapes"];
+
+        for (let fruit of fruits) {
+            if (fruit === "Banana") {
+                console.log(fruit + " is yellow!");
+            } else if (fruit === "Apple") {
+                console.log(fruit + " is red!");
+            } else {
+                console.log(fruit + " is tasty!");
+            }
+        }
+
+
+        for (let index in fruits) {
+            console.log("Index:", index, "Value:", fruits[index]);
+        }
+
+    </script>
+</body>
+
+</html>
