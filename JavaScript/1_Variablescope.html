@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable_Scope</title>
+</head>
+
+<body>
+    <script>
+        // Global Scope
+        var globalVar = "I am global";
+
+        function scopeDemo() {
+            // Function Scope (var)
+            var functionVar = "I am function scoped";
+
+            // Block Scope (let, const)
+            if (true) {
+                let blockVar = "I am block scoped";
+                const constVar = "I am also block scoped";
+                console.log("Inside block:", blockVar, constVar);
+            }
+            // console.log(blockVar); // ❌ Error: blockVar not accessible here
+
+            console.log("Inside function:", functionVar);
+        }
+
+        // Lexical Scope (Closure)
+        function outer() {
+            let outerVar = "Outer variable";
+            function inner() {
+                console.log("Inner accessing:", outerVar);
+            }
+            inner();
+        }
+
+        // Hoisting Example
+        console.log("Hoisted var:", hoistedVar); // undefined (hoisted but not assigned yet)
+        var hoistedVar = "Now initialized";
+
+        // console.log(hoistedLet); // ❌ Error: Cannot access before initialization
+        let hoistedLet = "Declared with let";
+
+        // Run demos
+        console.log("Global:", globalVar);
+        scopeDemo();
+        outer();
+
+
+    </script>
+</body>
+
+</html>
