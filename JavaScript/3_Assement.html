@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUM OF ARRAY</title>
+</head>
+
+<body>
+    <script>
+        // 1. Sum of Array Elements
+        let arr = [5, 10, 15, 20];
+        let sum = 0;
+        for (let num of arr) {
+            sum += num;
+        }
+        console.log("1) Sum of array elements =", sum);
+
+        // 2. Count Positive, Negative, and Zero Values
+        let arr2 = [-2, 0, 5, -7, 8, 0, 3];
+        let pos = 0, neg = 0, zero = 0;
+        for (let num of arr2) {
+            if (num > 0) pos++;
+            else if (num < 0) neg++;
+            else zero++;
+        }
+        console.log("2) Positive:", pos, "Negative:", neg, "Zeros:", zero);
+
+        // 3. Student Marks and Grade Report
+        let marks = [35, 78, 90, 40, 55];
+        let total = 0, highest = marks[0], passed = 0;
+        for (let m of marks) {
+            total += m;
+            if (m > highest) highest = m;
+            if (m >= 40) passed++;
+        }
+        let avg = total / marks.length;
+        console.log("3) Average Marks =", avg.toFixed(2));
+        console.log("   Highest Mark =", highest);
+        console.log("   Students Passed =", passed);
+
+        // 4. Numbers Divisible by 5 (1–100)
+        console.log("4) Numbers divisible by 5 (1–100):");
+        for (let i = 1; i <= 100; i++) {
+            if (i % 5 === 0) {
+                console.log(i);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
