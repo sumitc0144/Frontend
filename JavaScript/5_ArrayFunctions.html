@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Function </title>
+</head>
+
+<body>
+    <script>
+        // Create an array
+        let arr = ["Apple", "Banana", "Cherry", "Date"];
+
+        console.log("Original Array:", arr);
+
+        // 1. length → number of elements
+        console.log("Length:", arr.length); // 4
+
+        // 2. at() → element at index (supports negative)
+        console.log("Element at index 2:", arr.at(2));   // Cherry
+        console.log("Last element:", arr.at(-1));        // Date
+
+        // 3. toString() → convert array to comma-separated string
+        console.log("toString():", arr.toString());      // "Apple,Banana,Cherry,Date"
+
+        // 4. join() → convert array to string with custom separator
+        console.log("join('-'):", arr.join("-"));        // "Apple-Banana-Cherry-Date"
+
+        // 5. push() → add at end
+        arr.push("Elderberry");
+        console.log("After push:", arr);
+
+        // 6. pop() → remove last
+        arr.pop();
+        console.log("After pop:", arr);
+
+        // 7. unshift() → add at start
+        arr.unshift("Apricot");
+        console.log("After unshift:", arr);
+
+        // 8. shift() → remove first
+        arr.shift();
+        console.log("After shift:", arr);
+
+        // 9. concat() → merge arrays
+        let moreFruits = ["Fig", "Grape"];
+        let merged = arr.concat(moreFruits);
+        console.log("concat:", merged);
+
+        // 10. slice() → extract portion
+        console.log("slice(1,3):", arr.slice(1, 3));
+
+        // 11. splice() → remove/replace/add
+        arr.splice(2, 1, "Kiwi"); // remove 1 at index 2, insert Kiwi
+        console.log("After splice:", arr);
+
+        // 12. sort() → sort alphabetically
+        arr.sort();
+        console.log("Sorted:", arr);
+
+        // 13. reverse() → reverse order
+        arr.reverse();
+        console.log("Reversed:", arr);
+
+    </script>
+</body>
+
+</html>
