@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECT</title>
+</head>
+
+<body>
+    <script>
+        // =======================
+        // OBJECT BASICS
+        // =======================
+
+        // 1. Object literal
+        const person = {
+            name: "Sumit",
+            age: 25,
+            city: "Pune"
+        };
+        console.log("Object literal:", person);
+
+        // 2. Access properties
+        console.log("Dot notation:", person.name);       // Output: Sumit
+        console.log("Bracket notation:", person["age"]); // Output: 25
+
+        // 3. Add / Update / Delete
+        person.email = "sumit@example.com"; // add
+        person.age = 26;                    // update
+        delete person.city;                 // delete
+        console.log("Modified object:", person);
+        // Output: { name: 'Sumit', age: 26, email: 'sumit@example.com' }
+
+
+        // =======================
+        // OBJECT METHODS
+        // =======================
+
+        // 4. hasOwnProperty
+        console.log("Has age?", person.hasOwnProperty("age")); // true
+
+        // 5. Object.keys / Object.values / Object.entries
+        console.log("Keys:", Object.keys(person));     // [ 'name', 'age', 'email' ]
+        console.log("Values:", Object.values(person)); // [ 'Sumit', 26, 'sumit@example.com' ]
+        console.log("Entries:", Object.entries(person));
+        // [ [ 'name', 'Sumit' ], [ 'age', 26 ], [ 'email', 'sumit@example.com' ] ]
+
+        // 6. Object.assign → copy properties
+        const extra = { country: "India", hobby: "Chess" };
+        const merged = Object.assign({}, person, extra);
+        console.log("Merged object:", merged);
+        // Output: { name: 'Sumit', age: 26, email: 'sumit@example.com', country: 'India', hobby: 'Chess' }
+
+        // 7. Object.freeze → immutable
+        Object.freeze(person);
+        person.name = "Changed"; // ignored
+        console.log("Frozen object:", person);
+        // Output: { name: 'Sumit', age: 26, email: 'sumit@example.com' }
+
+        // 8. Object.seal → can update but not add/remove
+        const car = { brand: "Tesla", color: "Red" };
+        Object.seal(car);
+        car.color = "Blue"; // allowed
+        car.year = 2024;    // ignored
+        delete car.brand;   // ignored
+        console.log("Sealed object:", car);
+        // Output: { brand: 'Tesla', color: 'Blue' }
+
+
+        // =======================
+        // ITERATION
+        // =======================
+
+        // 9. for...in → iterate keys
+        for (let key in merged) {
+            console.log("for...in:", key, "=", merged[key]);
+        }
+        // Output: name = Sumit, age = 26, email = sumit@example.com, country = India, hobby = Chess
+
+        // 10. Object.entries with for...of
+        for (let [key, value] of Object.entries(merged)) {
+            console.log("for...of entries:", key, "=", value);
+        }
+        // Output: same as above
+
+
+        // =======================
+        // METHODS INSIDE OBJECTS
+        // =======================
+
+        const student = {
+            name: "Anita",
+            introduce() {
+                console.log(`Hi, I'm ${this.name}`);
+            }
+        };
+        student.introduce(); // Output: Hi, I'm Anita
+
+
+        // =======================
+        // CLASSES & PROTOTYPES
+        // =======================
+
+        // 11. Constructor function
+        function Animal(type) {
+            this.type = type;
+        }
+        Animal.prototype.speak = function () {
+            console.log(`${this.type} makes a sound.`);
+        };
+        const dog = new Animal("Dog");
+        dog.speak(); // Output: Dog makes a sound.
+
+        // 12. ES6 Class
+        class Vehicle {
+            constructor(model, year) {
+                this.model = model;
+                this.year = year;
+            }
+            info() {
+                console.log(`${this.model} (${this.year})`);
+            }
+        }
+        const car1 = new Vehicle("BMW M4", 2025);
+        car1.info(); // Output: BMW M4 (2025)
+
+    </script>
+</body>
+
+</html>
