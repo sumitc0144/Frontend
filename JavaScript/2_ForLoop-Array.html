@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array</title>
+    <title>Array(loop)</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         console.log(arr2);
 
         let fruits = ["Apple", "Banana", "Mango", "Orange", "Grapes"];
-
+        // Iterates over the values of an iterable 
         for (let fruit of fruits) {
             if (fruit === "Banana") {
                 console.log(fruit + " is yellow!");
@@ -30,7 +30,7 @@
             }
         }
 
-
+        // Iterates over the keys
         for (let index in fruits) {
             console.log("Index:", index, "Value:", fruits[index]);
         }
