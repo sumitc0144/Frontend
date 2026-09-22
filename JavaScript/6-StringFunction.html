@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // JavaScript String Methods Cheat Sheet with Comments
+
+        let str = "  Hello World  ";
+
+        // 🔹 Properties
+        console.log("Length:", str.length); // total number of characters (including spaces)
+
+        // 🔹 Character Access
+        console.log("charAt(0):", str.charAt(0)); // character at index 0 → " "
+        console.log("at(-1):", str.at(-1));       // last character → " " (supports negative index)
+        console.log("Bracket [1]:", str[1]);      // character at index 1 → "H"
+
+        // 🔹 Searching
+        console.log("indexOf('World'):", str.indexOf("World"));   // position of "World" → 8
+        console.log("lastIndexOf('o'):", str.lastIndexOf("o"));   // last occurrence of "o"
+        console.log("includes('Hello'):", str.includes("Hello")); // true if substring exists
+        console.log("startsWith('Hell'):", str.trim().startsWith("Hell")); // true after trimming
+        console.log("endsWith('World'):", str.trim().endsWith("World"));   // true after trimming
+
+        // 🔹 Extracting Substrings
+        console.log("slice(0,5):", str.slice(0, 5));       // "  Hel" → supports negative index
+        console.log("slice(-5):", str.slice(-5));          // last 5 characters → "orld "
+        console.log("substring(0,5):", str.substring(0, 5)); // "  Hel" → no negative index support
+        console.log("substr(2,5):", str.substr(2, 5));     // "Hello" → deprecated but works
+
+        // 🔹 Transformation
+        console.log("toUpperCase:", str.toUpperCase()); // "  HELLO WORLD  "
+        console.log("toLowerCase:", str.toLowerCase()); // "  hello world  "
+        console.log("trim:", str.trim());               // remove spaces → "Hello World"
+        console.log("trimStart:", str.trimStart());     // remove leading spaces
+        console.log("trimEnd:", str.trimEnd());         // remove trailing spaces
+
+        // 🔹 Replace
+        console.log("replace:", str.replace("World", "JS"));     // replace first match → "  Hello JS  "
+        console.log("replaceAll:", "a-b-c-b".replaceAll("b", "X")); // replace all → "a-X-c-X"
+        console.log("regex replace:", "abc123".replace(/\d/g, "#")); // regex replace digits → "abc###"
+
+        // 🔹 Splitting & Joining
+        console.log("split(','):", "a,b,c".split(",")); // ["a","b","c"]
+        console.log("concat:", "Hello".concat(" ", "JS")); // "Hello JS"
+
+        // 🔹 Repeat & Pad
+        console.log("repeat(3):", "Hi".repeat(3));       // "HiHiHi"
+        console.log("padStart:", "5".padStart(3, "0"));  // "005"
+        console.log("padEnd:", "5".padEnd(3, "0"));      // "500"
+
+        // 🔹 Modern Unicode Safety (ES2022+)
+        let unsafe = "A\uD800"; // malformed surrogate pair
+        console.log("isWellFormed:", unsafe.isWellFormed()); // false → string has invalid Unicode
+        console.log("toWellFormed:", unsafe.toWellFormed()); // "A�" → fixes invalid Unicode
+
+    </script>
+</body>
+
+</html>
