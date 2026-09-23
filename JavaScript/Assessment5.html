@@ -12,9 +12,25 @@
         // 1. Employee Name Formatter
         let employeeName = "      john doe      ";
 
-        let cleanedstring=employeeName.trim().toUpperCase()
-        console.log("cleaned text "+cleanedstring)
-        console.log("Length of string "+employeeName.length)
+        let cleanedstring = employeeName.trim().toUpperCase()
+        console.log("cleaned text " + cleanedstring)
+        console.log("Length of string " + employeeName.length)
+        // 2. Email Analyzer
+        let email = "student@gmail.com";
+        console.log("Index of @ :" + email.indexOf("@"))
+        console.log("Does email ends with .com :" + email.endsWith('.com'))
+        console.log("email contains gamil" + email.includes("gmail"))
+        // 3. Product Code
+        let productCode = "PRD-2026-LAPTOP";
+        console.log("After slic :" + productCode.slice(2, 8))
+        console.log("Use substring :" + productCode.substring(9))
+        console.log("Lowercase :" + productCode.toLowerCase())
+        // 4. Course List
+        
+    let courses = "HTML,CSS,JavaScript,Bootstrap,Angular,PHP";
+    console.log("String to array: " + courses.split(","));
+    console.log("Total number of courses: " + courses.split(",").length);
+    console.log("Print the third course: " + courses.split(",")[2]);
     </script>
 </body>
 
