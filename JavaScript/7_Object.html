@@ -124,6 +124,50 @@
         }
         const car1 = new Vehicle("BMW M4", 2025);
         car1.info(); // Output: BMW M4 (2025)
+        // Object with another object inside
+        const user = {
+            name: "Sumit",
+            age: 25,
+            address: {
+                street: "Karvenagar",
+                city: "Pune",
+                pin: 411052
+            },
+            education: {
+                school: {
+                    name: "Pragati Vidya Mandir",
+                    grade: "10th",
+                    percentage: 84.40
+                },
+                college: {
+                    name: "Garware College",
+                    grade: "12th",
+                    percentage: 54
+                }
+            }
+        };
+
+        console.log("User object:", user);
+
+        // Access nested properties
+        console.log("City:", user.address.city);
+        // Output: Pune
+
+        console.log("School name:", user.education.school.name);
+        // Output: Pragati Vidya Mandir
+
+        // Update nested property
+        user.address.pin = 411053;
+        console.log("Updated PIN:", user.address.pin);
+        // Output: 411053
+
+        // Add new nested property
+        user.address.country = "India";
+        console.log("Address with country:", user.address);
+
+        // Delete nested property
+        delete user.education.college.percentage;
+        console.log("Education after delete:", user.education.college);
 
     </script>
 </body>
