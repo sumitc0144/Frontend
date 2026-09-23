@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment</title>
+</head>
+
+<body>
+    <script>
+        // Print all even numbers between 1 and 100
+        for (let i = 2; i <= 100; i += 2) {
+            console.log(i);
+        }
+        // Array of student names
+        let students = ["Amit", "Priya", "Rahul", "Sneha", "Karan"];
+
+        // Using for-in loop to print names
+        for (let index in students) {
+            console.log(students[index]);
+        }
+        //Palindrome
+        function isPalindrome(num) {
+            let str = num.toString();
+            let reversed = str.split("").reverse().join("");
+            if (str === reversed) {
+                console.log(num + " → Palindrome");
+            } else {
+                console.log(num + " → Not Palindrome");
+            }
+        }
+
+        isPalindrome(121); // Palindrome
+        isPalindrome(123); // Not Palindrome
+        //Duplicate
+        let numbers = [10, 20, 30, 20, 40, 10, 50];
+        let seen = new Set();
+        let duplicates = new Set();
+
+        for (let num of numbers) {
+            if (seen.has(num)) {
+                duplicates.add(num);
+            } else {
+                seen.add(num);
+            }
+        }
+
+        console.log("Duplicate elements:", [...duplicates]); // [20, 10]
+        //Reverse withou reverse() function
+        let str = "JavaScript";
+        let reversed = "";
+
+        for (let i = str.length - 1; i >= 0; i--) {
+            reversed += str[i];
+        }
+
+        console.log("Reversed string:", reversed); // tpircSavaJ
+
+    </script>
+</body>
+
+</html>
