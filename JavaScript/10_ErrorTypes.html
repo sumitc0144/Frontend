@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errors and there Types</title>
+</head>
+
+<body>
+    <script>
+        // 1. Generic Error
+        try {
+            throw new Error("Something went wrong!");
+        } catch (e) {
+            console.log("Error:", e.message);
+        }
+
+        // 2. RangeError
+        try {
+            let arr = new Array(-1); // invalid length
+        } catch (e) {
+            console.log("RangeError:", e.message);
+        }
+
+        // 3. ReferenceError
+        try {
+            console.log(x); // x is not defined
+        } catch (e) {
+            console.log("ReferenceError:", e.message);
+        }
+
+        // 4. SyntaxError
+        try {
+            // Valid code string
+            eval("console.log('Hello from eval!')");
+
+            // Invalid code string → SyntaxError
+            eval("foo bar"); // invalid JS code
+        } catch (e) {
+            console.log("SyntaxError:", e.message);
+        }
+
+        // 5. TypeError
+        try {
+            let num = 42;
+            num.toUpperCase(); // number has no toUpperCase
+        } catch (e) {
+            console.log("TypeError:", e.message);
+        }
+
+        // 6. URIError
+        try {
+
+            // Valid URI
+            console.log(decodeURI("https%3A%2F%2Fexample.com"));
+            // Output: https://example.com
+
+            // Invalid URI → URIError
+            decodeURI("%"); // malformed URI
+        } catch (e) {
+            console.log("URIError:", e.message);
+        }
+
+        // 7. EvalError (rare in modern JS)
+        try {
+            throw new EvalError("Eval function error!");
+        } catch (e) {
+            console.log("EvalError:", e.message);
+        }
+
+        // 8. AggregateError (ES2021, used with Promise.any)
+        try {
+            throw new AggregateError([
+                new Error("First error"),
+                new Error("Second error")
+            ], "Multiple errors occurred");
+        } catch (e) {
+            console.log("AggregateError:", e.message);
+            e.errors.forEach(err => console.log(" -", err.message));
+        }
+
+    </script>
+</body>
+
+</html>
