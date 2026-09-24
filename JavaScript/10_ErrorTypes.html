@@ -79,6 +79,9 @@
             console.log("AggregateError:", e.message);
             e.errors.forEach(err => console.log(" -", err.message));
         }
+        finally{
+            console.log("All Errors checked");
+        }
 
     </script>
 </body>
