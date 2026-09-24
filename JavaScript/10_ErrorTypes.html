@@ -33,7 +33,7 @@
         // 4. SyntaxError
         try {
             // Valid code string
-            eval("console.log('Hello from eval!')");
+            eval("console.log('     Hello from eval!')");
 
             // Invalid code string → SyntaxError
             eval("foo bar"); // invalid JS code
@@ -53,7 +53,7 @@
         try {
 
             // Valid URI
-            console.log(decodeURI("https%3A%2F%2Fexample.com"));
+            console.log(decodeURI("     https%3A%2F%2Fexample.com"));
             // Output: https://example.com
 
             // Invalid URI → URIError
