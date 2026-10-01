@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout setInterval</title>
+</head>
+
+<body>
+    <script>
+        // setTimeout (one-time delay)
+        // Prints “Hello, world!” once after 2 seconds.
+        function greet() {
+            console.log("Hello, world!");
+        }
+
+        // Executes greet() after 2 seconds
+        setTimeout(greet, 2000);
+
+        // setInterval (repeated delay)
+        // Prints “Hello, world!” every 2 seconds.
+        function showTime() {
+            console.log(new Date().toLocaleTimeString());
+        }
+
+        // Executes showTime() every 1 second
+        setInterval(showTime, 1000);
+        // ⚠️ Important Notes
+        // Both functions return an ID that you can use to stop them:
+
+        let timerId = setTimeout(() => {
+            console.log("Runs once after 3 seconds");
+        }, 3000);
+
+        // Cancel before it runs
+        clearTimeout(timerId);
+
+        // setInterval returns an ID that you can use to stop it:
+        //🔁 setInterval + clearInterval
+        // Stop the interval
+        let intervalId = setInterval(() => {
+            console.log("Runs every 2 seconds");
+        }, 2000);
+
+        // Stop after 10 seconds
+        setTimeout(() => {
+            clearInterval(intervalId);
+            console.log("Interval stopped");
+        }, 10000);
+
+    </script>
+</body>
+
+</html>
