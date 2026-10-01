@@ -11,6 +11,7 @@
     <script>
         // modifying elemnts -> innerHTML , textContent,style
         let title = document.getElementById("title");   //it will execute the tags in it.
+        // Using innerHTML executes HTML tags inside the string, so you successfully replaced the heading text with a link.
         title.innerHTML = "<a href='https://www.google.com'>Google</a>";
         title.style.background = "red";
 
@@ -18,9 +19,6 @@
         // textContent → shows the string exactly as written, tags included.
         sub.textContent = "<a href='https://www.google.com'>Google</a>";
        sub.style.color="yellow";
-
-       //creating and removing elemnts -> createElement ,appendChild, removechild
-       
     </script>
 </body>
 </html>
