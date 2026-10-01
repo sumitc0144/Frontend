@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom2</title>
+</head>
+<h1 id="title">Heading 1</h1>
+<h2 id="subtitle">Heading 2</h2>
+<body>
+    <script>
+        // modifying elemnts -> innerHTML , textContent,style
+        let title = document.getElementById("title");   //it will execute the tags in it.
+        title.innerHTML = "<a href='https://www.google.com'>Google</a>";
+        title.style.background = "red";
+
+        let sub = document.getElementById("subtitle");   // it will take the text as it is.
+        // textContent → shows the string exactly as written, tags included.
+        sub.textContent = "<a href='https://www.google.com'>Google</a>";
+       sub.style.color="yellow";
+
+       //creating and removing elemnts -> createElement ,appendChild, removechild
+       
+    </script>
+</body>
+</html>
