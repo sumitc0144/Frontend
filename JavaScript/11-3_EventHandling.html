@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<style>
+    #division{
+        border: 1px solid #000;
+    }
+</style>
+<body>
+    <div id ="division" onclick="changeColor()">
+        <h1>Heading 1</h1>
+    </div>
+    <script>
+
+        // //Inline Event
+        // function changeColor(){
+        //     let div = document.getElementById("division");
+        //     div.style.backgroundColor ="red";
+        //     div.innerHTML="<h1>Text Changed</h1>"
+        // }
+
+
+        // AddEventListener
+        let division = document.getElementById("division");
+        division.addEventListener("click", ()=>{
+            division.style.backgroundColor = "yellow"
+        });
+    </script>
+</body>
+</html>
