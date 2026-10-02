@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+
+    <script>
+        // A Promise is an object that represents a task that will finish in the future. 
+        // There are three states in promises
+        // 1. Resolve 2. Reject 3. Pending
+        // It demonstrates how Promises represent tasks that may succeed (resolve) or fail (reject).
+        // The .then() method handles success, while .catch() handles errors.
+        let myPromise = new Promise((resolve, reject) => {
+            let num1 = 20;
+            let num2 = 30;
+            if ((num1 + num2) == 30) {
+                resolve("Promise Resolved");
+            }
+            else {
+                reject("Promise Rejected");
+            }
+        });
+
+        myPromise.then((msg) => {
+            console.log(msg);
+        })
+            .catch((err) => {
+                console.log(err);
+            })
+    </script>
+</body>
+
+</html>
