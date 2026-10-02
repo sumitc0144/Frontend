@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Callback</title>
 </head>
+
 <body>
-    
+
     <script>
         // Callback is a function passed as an argument to another funtion.
         // Higher order function is a function that takes another function as an argument.
 
-        function greet(name, callback){
+        function greet(name, callback) {
             console.log("Hello " + name);
             callback();
         }
 
-        function speak(){
+        function speak() {
             console.log("Goodbye");
         }
 
         greet("Sumit", speak);
 
-        
+        // Hoisting is default behaviour of javascript that variable and function 
+        // declaration are move to the top of their scope
+        // Hoisting allows you to call functions before they’re defined:
+
+        num1 = 10;
+        console.log(num1);
+
+        var num1;
+
+        function add() {
+
+            number1 = 10;
+            number2 = 20;
+
+            var number1;
+            var number2
+        }
+
+
     </script>
 </body>
+
 </html>
