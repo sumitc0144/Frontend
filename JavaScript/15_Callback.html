@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    
+    <script>
+        // Callback is a function passed as an argument to another funtion.
+        // Higher order function is a function that takes another function as an argument.
+
+        function greet(name, callback){
+            console.log("Hello " + name);
+            callback();
+        }
+
+        function speak(){
+            console.log("Goodbye");
+        }
+
+        greet("Sumit", speak);
+
+        
+    </script>
+</body>
+</html>
