@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise  2</title>
+</head>
+
+<body>
+
+    <script>
+        // A Promise is an object that represents a task that will finish in the future. 
+        // There are three states in promises
+        // 1. Resolve 2. Reject 3. Pending
+        let myPromise = new Promise((resolve) => {
+            console.log("Fetiching Data...");
+            setTimeout(()=>{
+                resolve("Promise Resolved");
+            },2000)
+            console.log("Finished");
+        });
+
+        myPromise.then((msg) => {
+            console.log(msg);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+    </script>
+</body>
+
+</html>
